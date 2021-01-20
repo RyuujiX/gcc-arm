@@ -1,5 +1,5 @@
-/* read-rtl-function.h - Reader for RTL function dumps
-   Copyright (C) 2016-2021 Free Software Foundation, Inc.
+/* Global, SSA-based optimizations using mathematical identities.
+   Copyright (C) 2021 Free Software Foundation, Inc.
 
 This file is part of GCC.
 
@@ -17,12 +17,10 @@ You should have received a copy of the GNU General Public License
 along with GCC; see the file COPYING3.  If not see
 <http://www.gnu.org/licenses/>.  */
 
-#ifndef GCC_READ_RTL_FUNCTION_H
-#define GCC_READ_RTL_FUNCTION_H
+#ifndef GCC_TREE_SSA_MATH_OPTS_H
+#define GCC_TREE_SSA_MATH_OPTS_H
 
-extern bool read_rtl_function_body (const char *path);
+extern tree powi_as_mults (gimple_stmt_iterator *, location_t,
+			   tree, HOST_WIDE_INT);
 
-extern bool read_rtl_function_body_from_file_range (location_t start_loc,
-						    location_t end_loc);
-
-#endif /* GCC_READ_RTL_FUNCTION_H */
+#endif  /* GCC_TREE_SSA_MATH_OPTS_H  */

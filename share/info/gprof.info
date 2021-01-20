@@ -27,7 +27,7 @@ to determine which parts of a program are taking most of the execution
 time.  We assume that you know how to write, compile, and execute
 programs.  GNU 'gprof' was written by Jay Fenlason.
 
-   This manual is for 'gprof' (Custom BinUtils) version 2.35.50.
+   This manual is for 'gprof' (Custom BinUtils) version 2.36.50.
 
    This document is distributed under the terms of the GNU Free
 Documentation License version 1.3.  A copy of the license is included in
@@ -1675,7 +1675,7 @@ File: gprof.info,  Node: File Format,  Next: Internals,  Prev: Implementation,  
 ==============================
 
 The old BSD-derived file format used for profile data does not contain a
-magic cookie that allows to check whether a data file really is a
+magic cookie that allows one to check whether a data file really is a
 'gprof' file.  Furthermore, it does not provide a version number, thus
 rendering changes to the file format almost impossible.  GNU 'gprof'
 uses a new file format that provides these features.  For backward
@@ -2451,9 +2451,9 @@ Node: Incompatibilities64765
 Node: Details66259
 Node: Implementation66652
 Node: File Format72551
-Node: Internals76839
-Node: Debugging85329
-Node: GNU Free Documentation License86919
+Node: Internals76843
+Node: Debugging85333
+Node: GNU Free Documentation License86923
 
 End Tag Table
 

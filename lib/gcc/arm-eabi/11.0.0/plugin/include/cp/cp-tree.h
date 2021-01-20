@@ -1,5 +1,5 @@
 /* Definitions for -*- C++ -*- parsing and type checking.
-   Copyright (C) 1987-2020 Free Software Foundation, Inc.
+   Copyright (C) 1987-2021 Free Software Foundation, Inc.
    Contributed by Michael Tiemann (tiemann@cygnus.com)
 
 This file is part of GCC.
@@ -6471,7 +6471,8 @@ extern bool is_std_init_list			(tree);
 extern bool is_list_ctor			(tree);
 extern void validate_conversion_obstack		(void);
 extern void mark_versions_used			(tree);
-extern bool unsafe_return_slot_p		(tree);
+extern int unsafe_return_slot_p			(tree);
+extern bool make_safe_copy_elision		(tree, tree);
 extern bool cp_warn_deprecated_use		(tree, tsubst_flags_t = tf_warning_or_error);
 extern void cp_warn_deprecated_use_scopes	(tree);
 extern tree get_function_version_dispatcher	(tree);
@@ -8237,6 +8238,8 @@ struct uid_sensitive_constexpr_evaluation_checker
   uid_sensitive_constexpr_evaluation_checker ();
   bool evaluation_restricted_p () const;
 };
+
+void cp_tree_c_finish_parsing ();
 
 /* In cp-ubsan.c */
 extern void cp_ubsan_maybe_instrument_member_call (tree);
